@@ -1,9 +1,9 @@
 import "./App.css";
 import "./index.scss";
 import { Button } from "@carbon/react";
-import HeadBar from "./header.jsx";
+import { HeadBar } from "./header.jsx";
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <HeadBar />
@@ -16,6 +16,4 @@ function App() {
       </header>
     </div>
   );
-}
-
-export default App;
+};

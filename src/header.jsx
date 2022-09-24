@@ -11,7 +11,7 @@ import {
   Theme,
 } from "@carbon/react";
 
-function HeadBar() {
+export const HeadBar = () => {
   return (
     <Theme theme="g100">
       <Header aria-label="IBM Platform Name">
@@ -42,5 +42,4 @@ function HeadBar() {
       </Header>
     </Theme>
   );
-}
-export default HeadBar;
+};
