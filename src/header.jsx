@@ -9,12 +9,23 @@ import {
   HeaderMenu,
   HeaderMenuItem,
   Theme,
+  SkipToContent,
+  HeaderMenuButton,
 } from "@carbon/react";
 
-export const HeadBar = () => {
+export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
   return (
     <Theme theme="g100">
       <Header aria-label="IBM Platform Name">
+
+        <SkipToContent />
+        <HeaderMenuButton
+          aria-label="Open menu"
+          isCollapsible
+          onClick={onClickSideNavExpand}
+          isActive={isSideNavExpanded}
+        />
+
         <HeaderName href="#" prefix="Akitsu-Lab">
           [Platform]
         </HeaderName>
@@ -29,13 +40,13 @@ export const HeadBar = () => {
           </HeaderMenu>
         </HeaderNavigation>
         <HeaderGlobalBar>
-          <HeaderGlobalAction aria-label="Search" onClick={() => {}}>
+          <HeaderGlobalAction aria-label="Search" onClick={() => { }}>
             <Search />
           </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="Notifications" onClick={() => {}}>
+          <HeaderGlobalAction aria-label="Notifications" onClick={() => { }}>
             <Notification />
           </HeaderGlobalAction>
-          <HeaderGlobalAction aria-label="App Switcher" onClick={() => {}}>
+          <HeaderGlobalAction aria-label="App Switcher" onClick={() => { }}>
             <Switcher />
           </HeaderGlobalAction>
         </HeaderGlobalBar>
