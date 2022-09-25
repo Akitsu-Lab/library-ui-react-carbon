@@ -20,3 +20,6 @@ axios ライブラリのインストール
 ```shell
 $ yarn add axios
 ```
+
+CROS 回避
+safari の開発タブで「クロスオリジンの制限を無効にする」をクリック
