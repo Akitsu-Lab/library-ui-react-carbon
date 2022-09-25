@@ -21,14 +21,15 @@ export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
         <SkipToContent />
         <HeaderMenuButton
           aria-label="Open menu"
-          isCollapsible
           onClick={onClickSideNavExpand}
           isActive={isSideNavExpanded}
+          isCollapsible
         />
 
         <HeaderName href="#" prefix="Akitsu-Lab">
           [Platform]
         </HeaderName>
+
         <HeaderNavigation aria-label="IBM [Platform]">
           <HeaderMenuItem href="#">Link 1</HeaderMenuItem>
           <HeaderMenuItem href="#">Link 2</HeaderMenuItem>
@@ -39,6 +40,7 @@ export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
             <HeaderMenuItem href="#">Sub-link 3</HeaderMenuItem>
           </HeaderMenu>
         </HeaderNavigation>
+
         <HeaderGlobalBar>
           <HeaderGlobalAction aria-label="Search" onClick={() => { }}>
             <Search />
@@ -50,6 +52,7 @@ export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
             <Switcher />
           </HeaderGlobalAction>
         </HeaderGlobalBar>
+
       </Header>
     </Theme>
   );
