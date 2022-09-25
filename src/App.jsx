@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const App = () => {
 
-  const initialURL = "http://localhost:8080/services/v1/books";
+  const initialURL = "http://localhost:8080/services/v1/books"; //"http://os3-285-32121.vs.sakura.ne.jp:8080/services/v1/books"
 
   useEffect(() => {
     console.log("booklistを取得します");
