@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Search, Notification, Switcher } from "@carbon/icons-react";
 import {
   Header,
@@ -11,9 +11,17 @@ import {
   Theme,
   SkipToContent,
   HeaderMenuButton,
+  SideNav,
+  SideNavMenu,
+  SideNavItems,
+  SideNavMenuItem,
+  SideNavLink
 } from "@carbon/react";
 
-export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
+export const HeadBar = () => {
+
+  const [isSideNavExpanded, setIsSideNavExpanded] = useState(false);
+  const onClickSideNavExpand = () => setIsSideNavExpanded(!isSideNavExpanded);
   return (
     <Theme theme="g100">
       <Header aria-label="IBM Platform Name">
@@ -54,6 +62,32 @@ export const HeadBar = ({ isSideNavExpanded, onClickSideNavExpand }) => {
         </HeaderGlobalBar>
 
       </Header>
+
+      <SideNav
+        aria-label="Side navigation"
+        isRail
+        expanded={isSideNavExpanded}
+        onOverlayClick={onClickSideNavExpand}>
+        <SideNavItems>
+          <SideNavMenu title="Category title">
+            <SideNavMenuItem href="https://www.carbondesignsystem.com/">
+              Link
+            </SideNavMenuItem>
+            <SideNavLink href="https://www.carbondesignsystem.com/">
+              Link
+            </SideNavLink>
+          </SideNavMenu>
+          <SideNavMenu title="Category title2">
+            <SideNavMenuItem href="https://www.carbondesignsystem.com/">
+              Link
+            </SideNavMenuItem>
+            <SideNavLink href="https://www.carbondesignsystem.com/">
+              Link
+            </SideNavLink>
+          </SideNavMenu>
+        </SideNavItems>
+
+      </SideNav>
     </Theme>
   );
 };
